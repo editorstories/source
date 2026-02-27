@@ -119,7 +119,7 @@ const translations: { [key: string]: Translations } = {
     'qna.paths.collaboration.title': 'Samarbetsstil',
     'qna.paths.value.title': 'Värde',
   },
-  en: {
+  eu: {
     'qna.title': "Let's talk collaboration",
     'qna.subtitle': 'Choose what matters most to you',
     'qna.readTime': 'min read',
@@ -145,7 +145,7 @@ const translations: { [key: string]: Translations } = {
     'qna.paths.collaboration.title': 'Collaboration Style',
     'qna.paths.value.title': 'Value',
   },
-  es: {
+  cas: {
     'qna.title': 'Hablemos de colaboración',
     'qna.subtitle': 'Elige lo que más te importa',
     'qna.readTime': 'min de lectura',
@@ -365,7 +365,7 @@ const qnaContent = {
       }
     ]
   },
-  en: {
+  eu: {
     work: [
       {
         q: 'How flexible is your work schedule?',
@@ -555,7 +555,7 @@ const qnaContent = {
       }
     ]
   },
-  es: {
+  cas: {
     work: [
       {
         q: '¿Qué tan flexible es tu horario de trabajo?',
@@ -1404,7 +1404,7 @@ const SummaryCard: FC<SummaryCardProps> = ({ exploredPaths, t, onClose, language
       collaboration: 'Proaktiv kommunikation med 2-timmars svarstid',
       value: 'Fräscht perspektiv med djup teoretisk grund och snabb inlärning'
     },
-    en: {
+    eu: {
       work: 'Flexible schedule with remote work priority',
       journey: 'Deep generalist expertise from 12 years of study',
       location: 'Stockholm-based, ready for international collaboration',
@@ -1413,7 +1413,7 @@ const SummaryCard: FC<SummaryCardProps> = ({ exploredPaths, t, onClose, language
       collaboration: 'Proactive communication with 2-hour response time',
       value: 'Fresh perspective with deep theoretical foundation and fast learning'
     },
-    es: {
+    cas: {
       work: 'Horario flexible con prioridad en trabajo remoto',
       journey: 'Experiencia generalista profunda de 12 años de estudio',
       location: 'Basado en Estocolmo, listo para colaboración internacional',
