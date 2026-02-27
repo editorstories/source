@@ -195,7 +195,7 @@ export const qnaContent: QnAContent = {
       }
     ]
   },
-  en: {
+  eu: {
     work: [
       {
         q: 'How flexible is your work schedule?',
@@ -385,7 +385,7 @@ export const qnaContent: QnAContent = {
       }
     ]
   },
-  es: {
+  cas: {
     work: [
       {
         q: '¿Qué tan flexible es tu horario de trabajo?',
