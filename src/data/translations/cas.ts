@@ -1,7 +1,7 @@
 // es.ts
 // src/data/translations/es.ts
-import { es_skills_list } from './sections/skills.sp';
-export const es = {
+import { cas_skills_list } from './sections/skills.cas';
+export const cas = {
 //    nav: {
 //      home: 'Inicio',
 //      about: 'Acerca',
@@ -156,7 +156,7 @@ export const es = {
       loadMore: 'Carga mas...',
       clearSearch: 'Empezar',
 
-      list: es_skills_list
+      list:cas_skills_list
     },
 
 

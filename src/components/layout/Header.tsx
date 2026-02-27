@@ -40,8 +40,8 @@ const Header: React.FC<HeaderProps> = ({ debugId = 'main' }) => {
 
   const languageLabels = useMemo(() => ({
     sv: 'SV',
-    en: 'EN',
-    es: 'ES'
+    eu: 'EU',
+    es: 'CAS'
   }), []);
 
   const forceCloseMenu = useCallback(() => {
@@ -112,7 +112,7 @@ const Header: React.FC<HeaderProps> = ({ debugId = 'main' }) => {
   }, [forceCloseMenu]);
 
   const toggleLanguage = useCallback(() => {
-    const languages: Language[] = ['sv', 'en', 'es'];
+    const languages: Language[] = ['sv', 'eu','cas'];
     const currentIndex = languages.indexOf(language);
     const nextIndex = (currentIndex + 1) % languages.length;
     const newLanguage = languages[nextIndex];

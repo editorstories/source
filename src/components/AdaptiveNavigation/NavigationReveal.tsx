@@ -13,8 +13,8 @@ interface NavigationRevealProps {
 
 const translations = {
   sv: { word: 'navigering', short: 'nav', suffixStart: 3 },
-  en: { word: 'navigation', short: 'nav', suffixStart: 3 },
-  es: { word: 'navegación', short: 'nav', suffixStart: 3 },
+  eu: { word: 'navigation', short: 'nav', suffixStart: 3 },
+  cas: { word: 'navegación', short: 'nav', suffixStart: 3 },
 };
 
 export const NavigationReveal: React.FC<NavigationRevealProps> = ({

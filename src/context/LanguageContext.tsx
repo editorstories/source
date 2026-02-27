@@ -4,7 +4,7 @@
 import React, { createContext, useContext, useState, useEffect, ReactNode } from 'react';
 import { translations } from '@/data/translations';
 
-export type Locale = 'sv' | 'en' | 'es';
+export type Locale = 'sv' | 'eu' | 'cas';
 type Messages = typeof translations.sv;
 
 interface LanguageContextType {
@@ -85,7 +85,7 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({ children }) 
 
     if (typeof window !== 'undefined') {
       const savedLocale = localStorage.getItem('language') as Locale;
-      if (savedLocale && ['en', 'sv', 'es'].includes(savedLocale)) {
+      if (savedLocale && ['eu', 'sv', 'cas'].includes(savedLocale)) {
         setLocaleState(savedLocale);
       }
     }

@@ -1,9 +1,9 @@
 // en.ts
 // src/data/translations/en.ts
-import { en_skills_list } from './sections/skills.en';
+import { eu_skills_list } from './sections/skills.eu';
 
 
-export const en = {
+export const eu = {
 //  nav: {
 //    home: 'Home',
 //    about: 'About',
@@ -159,7 +159,7 @@ export const en = {
     loadMore: 'Load more...',
     clearSearch: 'Clear search',
 
-    list: en_skills_list
+    list: eu_skills_list
   },
 
 

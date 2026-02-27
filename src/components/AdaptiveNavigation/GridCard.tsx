@@ -12,7 +12,7 @@ interface GridCardProps {
   currentSection?: string;
   currentLocale?: string;
 //  onLocaleChange?: (locale: string) => void;
-  onLocaleChange?: (locale: "sv" | "en" | "es") => void;
+  onLocaleChange?: (locale: "sv" | "eu" | "cas") => void;
   showLanguageSwitcher?: boolean;
   navAnimationComplete?: boolean;
   isMobile?: boolean; // NEW: Pass mobile state from parent
@@ -92,8 +92,8 @@ export default function GridCard({
           {/* Language switcher labels (top-left) */}
           <div className="absolute top-4 left-4 z-20">
             <div className="flex items-center gap-1 text-xs font-medium">
-              {/*{['sv', 'en', 'es'].map((lang, idx) => (*/}
-              {(['sv', 'en', 'es'] as const).map((lang, idx) => (
+              {/*{['sv', 'eu','cas'].map((lang, idx) => (*/}
+              {(['sv', 'eu', 'cas'] as const).map((lang, idx) => (
                 <React.Fragment key={lang}>
                   <span
                     onClick={(e) => {
@@ -107,7 +107,7 @@ export default function GridCard({
                         : 'text-slate-500 hover:text-slate-300 hover:bg-slate-800/50'}
                     `}
                   >
-                    {lang === 'es' ? 'SP' : lang.toUpperCase()}
+                    {lang === 'cas' ? 'CAS' : lang.toUpperCase()}
                   </span>
                   {idx < 2 && (
                     <span className="text-slate-700">|</span>

@@ -196,7 +196,7 @@ const translations = {
     freeNavigate: 'Free Navigate',
     guidedTour: 'Guided Tour',
 
-    // Principles stay in English
+    // Principles stay in english
     previous: 'Previous',
     next: 'Next',
     gotIt: 'Got it!',
@@ -2185,7 +2185,7 @@ const SomnloggPresentation: React.FC<SomnloggPresentationProps> = ({ onThemeChan
     return () => clearTimeout(timer);
   }, []);
 
-  const langLabels = { sv: 'SV', en: 'EN', es: 'SP' };
+  const langLabels = { sv: 'SV', en: 'EU', es: 'CAS' };
 
   // Also detect initial theme
   useEffect(() => {
@@ -2221,7 +2221,7 @@ const SomnloggPresentation: React.FC<SomnloggPresentationProps> = ({ onThemeChan
               height: '120px',
               width: '32px',
               minWidth: '32px',
-              fontSize: language === 'es' ? '0.65rem' : '0.75rem',
+              fontSize: language === 'cas' ? '0.65rem' : '0.75rem',
               display: 'flex',
               alignItems: 'center',
               justifyContent: 'center',

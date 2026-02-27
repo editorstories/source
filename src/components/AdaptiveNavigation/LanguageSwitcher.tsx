@@ -5,7 +5,7 @@ import React from "react";
 interface LanguageSwitcherProps {
   currentLocale: string;
 //  onLocaleChange: (locale: string) => void;
-  onLocaleChange: (locale: "sv" | "en" | "es") => void;
+  onLocaleChange: (locale: "sv" | "eu" | "cas") => void;
 }
 
 export default function LanguageSwitcher({ 
@@ -14,14 +14,14 @@ export default function LanguageSwitcher({
 }: LanguageSwitcherProps) {
 //  const languages = [
 //    { code: 'sv', label: 'SV' },
-//    { code: 'en', label: 'EN' },
-//    { code: 'es', label: 'ES' }
+//    { code: 'eu', label: 'EU' },
+//    { code: 'cas', label: 'CAS' }
 //  ];
 
   const languages = [
     { code: 'sv', label: 'SV' },
-    { code: 'en', label: 'EN' },
-    { code: 'es', label: 'ES' }
+    { code: 'eu', label: 'EU' },
+    { code: 'cas', label: 'CAS' }
   ] as const;
 
   return (

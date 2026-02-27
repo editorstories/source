@@ -15,7 +15,7 @@ export interface ThemeClasses {
 }
 
 // Language types
-export type Language = 'sv' | 'en' | 'es';
+export type Language = 'sv' | 'eu' | 'cas';
 export interface LanguageContent {
   nav: {
     home: string;

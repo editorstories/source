@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 
 interface StockholmClockProps {
-  language?: 'sv' | 'en' | 'es';
+  language?: 'sv' | 'eu' | 'cas';
 }
 
 export default function StockholmClock({ language = 'sv' }: StockholmClockProps) {

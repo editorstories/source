@@ -11,7 +11,7 @@ type WordPair = {
   right: string;
 };
 
-type LanguageKey = 'sv' | 'en' | 'es';
+type LanguageKey = 'sv' | 'eu' | 'cas';
 
 // Memoized background layer component for better performance
 const BackgroundLayer = React.memo(({

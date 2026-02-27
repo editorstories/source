@@ -5,7 +5,7 @@ import React from 'react';
 import GlobeLocalisation from '@/components/AdaptiveNavigation/GlobeLocalisation';
 
 type GlobeSize = 'small' | 'medium' | 'large';
-type LocaleKey = 'sv' | 'en' | 'es';
+type LocaleKey = 'sv' | 'eu' | 'cas';
 
 interface NavigationLanguageSwitcherProps {
   locale: string;

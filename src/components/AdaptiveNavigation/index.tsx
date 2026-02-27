@@ -26,7 +26,7 @@ export default function AdaptiveNavigation({ somnloggTheme = 'evening' }: Adapti
   const { currentSection, scrollDirection, allVisibilities, heroVisibility } = useSectionNavigation(sections);
 
   // ====== LOCAL UI STATE ======
-  // const [locale, setLocale] = useState<'sv' | 'en' | 'es'>('sv');
+  // const [locale, setLocale] = useState<'sv' | 'eu' | 'cas'>('sv');
   const { locale, setLocale, t } = useLanguage();
 
   const [mounted, setMounted] = useState(false);
@@ -551,7 +551,7 @@ export default function AdaptiveNavigation({ somnloggTheme = 'evening' }: Adapti
           isFading={isFading}
           currentSection={currentSection}
           currentLocale={locale}
-          onLocaleChange={(locale) => setLocale(locale as "sv" | "en" | "es")}
+          onLocaleChange={(locale) => setLocale(locale as "sv" | "eu" | "cas")}
           t={t}
         />
       )}
@@ -672,12 +672,12 @@ export default function AdaptiveNavigation({ somnloggTheme = 'evening' }: Adapti
                         </div>
                         <div className="absolute top-2 left-3 z-10">
                           <div className="flex items-center gap-1 text-[10px] font-medium">
-                            {['sv', 'en', 'es'].map((lang, idx) => (
+                            {['sv', 'eu', 'cas'].map((lang, idx) => (
                               <React.Fragment key={lang}>
                                 <span
                                   onClick={(e) => {
                                     e.stopPropagation();
-                                    setLocale(lang as 'sv' | 'en' | 'es');
+                                    setLocale(lang as 'sv' | 'eu' | 'cas');
                                   }}
                                   className={`
                                     px-1 py-0.5 transition-all duration-200 cursor-pointer
@@ -688,7 +688,7 @@ export default function AdaptiveNavigation({ somnloggTheme = 'evening' }: Adapti
                                     }
                                   `}
                                 >
-                                  {lang === 'es' ? 'SP' : lang.toUpperCase()}
+                                  {lang === 'cas' ? 'CAS' : lang.toUpperCase()}
                                 </span>
                                 {idx < 2 && (
                                   <span className="text-slate-700">|</span>

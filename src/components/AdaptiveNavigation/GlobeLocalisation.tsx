@@ -3,7 +3,7 @@
 
 import React from 'react';
 
-type LocaleKey = 'sv' | 'en' | 'es';
+type LocaleKey = 'sv' | 'eu' | 'cas';
 
 interface LocaleConfig {
   name: string;
@@ -26,13 +26,13 @@ const GlobeLocalisation: React.FC<GlobeLocalisationProps> = ({
   showLabel = false
 }) => {
 //      swedish: '#006AA7',
-//      english: '#C8102E',
+//      europe: '#C8102E',
 //      'text-emerald-400'
   const config = {
     colors: {
       swedish: '#22C55E',
-      english: '#ffffff',
-      spanish: '#E9A74F'
+      europe: '#ffffff',
+      castillan: '#E9A74F'
     }
   };
 
@@ -43,15 +43,15 @@ const GlobeLocalisation: React.FC<GlobeLocalisationProps> = ({
       countries: ['Sweden', 'Finland'],
       angle: 0
     },
-    en: {
-      name: 'english',
-      color: config.colors.english,
-      countries: ['United Kingdom', 'United States'],
+    eu: {
+      name: 'europe',
+      color: config.colors.europe,
+      countries: ['Europe'],
       angle: 120
     },
-    es: {
+    cas: {
       name: 'castellano',
-      color: config.colors.spanish,
+      color: config.colors.castillan,
       countries: ['Spain'],
       angle: 240
     }
@@ -93,7 +93,7 @@ const GlobeLocalisation: React.FC<GlobeLocalisationProps> = ({
     e.stopPropagation(); // Prevent event from bubbling to parent
     if (onLocaleClick) {
       // Cycle through locales
-      const locales: LocaleKey[] = ['sv', 'en', 'es'];
+      const locales: LocaleKey[] = ['sv', 'eu', 'cas'];
       const currentIndex = locales.indexOf(selectedLocale);
       const nextIndex = (currentIndex + 1) % locales.length;
       onLocaleClick(locales[nextIndex]);

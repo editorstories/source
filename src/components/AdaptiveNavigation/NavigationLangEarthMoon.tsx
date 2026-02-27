@@ -18,7 +18,7 @@ interface NavigationLangEarthMoonProps {
   size: GlobeSize;
   showLabel: boolean;
   fadeOut?: boolean;
-  onLocaleChange?: (locale: 'sv' | 'en' | 'es') => void;
+  onLocaleChange?: (locale: 'sv' | 'eu' | 'cas') => void;
 }
 
 // Simple wrapper - NO positioning logic, NO conditional logic

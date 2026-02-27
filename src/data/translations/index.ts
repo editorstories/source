@@ -1,13 +1,13 @@
 // src/data/translations/index.ts
 
 import { sv } from './sv';
-import { en } from './en';
-import { es } from './es';
+import { eu } from './eu';
+import { cas } from './cas';
 
 export const translations = {
   sv,
-  en,
-  es
+  eu,
+  cas
 };
 
 export type TranslationKey = keyof typeof sv;

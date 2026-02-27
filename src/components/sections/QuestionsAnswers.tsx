@@ -1006,8 +1006,8 @@ export default QnASection;
 const LanguageSwitcher: FC<LanguageSwitcherProps> = ({ language, setLanguage }) => {
   const languages = [
     { code: 'sv', label: 'Svenska' },
-    { code: 'en', label: 'English' },
-    { code: 'es', label: 'Español' }
+    { code: 'eu', label: 'Europe' },
+    { code: 'cas', label: 'Castellano' }
   ];
 
   return (
