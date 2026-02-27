@@ -355,7 +355,7 @@ export const eu = {
     subtitle: 'choose what matters most',
     readTime: 'min read',
     relatedQuestions: 'you might also want to know',
-    pathsLabel: {
+    pathLabel: {
       work: 'Work',
       journey: 'Journey',
       location: 'Location',
