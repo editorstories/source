@@ -146,8 +146,8 @@ export const cas = {
         showing: '{visible} de {total}',
         remaining: {
           zero: 'Reached infinity',
-          one: 'Descubre {count} mas habilidades...',
-          other: 'Descubre {count} mas habilidades...'
+          one: 'Descubre {count} habilidades mas...',
+          other: 'Descubre {count} habilidades mas...'
         }
       },
       // Proficiency
