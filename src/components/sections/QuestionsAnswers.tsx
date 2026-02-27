@@ -119,7 +119,7 @@ const translations: { [key: string]: Translations } = {
     'qna.paths.collaboration.title': 'Samarbetsstil',
     'qna.paths.value.title': 'Värde',
   },
-  en: {
+  eu: {
     'qna.title': "Let's talk collaboration",
     'qna.subtitle': 'Choose what matters most to you',
     'qna.readTime': 'min read',
@@ -145,7 +145,7 @@ const translations: { [key: string]: Translations } = {
     'qna.paths.collaboration.title': 'Collaboration Style',
     'qna.paths.value.title': 'Value',
   },
-  es: {
+  cas: {
     'qna.title': 'Hablemos de colaboración',
     'qna.subtitle': 'Elige lo que más te importa',
     'qna.readTime': 'min de lectura',
@@ -365,7 +365,7 @@ const qnaContent = {
       }
     ]
   },
-  en: {
+  eu: {
     work: [
       {
         q: 'How flexible is your work schedule?',
@@ -555,7 +555,7 @@ const qnaContent = {
       }
     ]
   },
-  es: {
+  cas: {
     work: [
       {
         q: '¿Qué tan flexible es tu horario de trabajo?',

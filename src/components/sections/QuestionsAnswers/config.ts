@@ -72,7 +72,7 @@ export const translations: { [key: string]: Translations } = {
     'qna.paths.collaboration.title': 'Samarbetsstil',
     'qna.paths.value.title': 'Värde',
   },
-  en: {
+  eu: {
     'qna.title': "Let's talk collaboration",
     'qna.subtitle': 'Choose what matters most to you',
     'qna.readTime': 'min read',
@@ -98,7 +98,7 @@ export const translations: { [key: string]: Translations } = {
     'qna.paths.collaboration.title': 'Collaboration Style',
     'qna.paths.value.title': 'Value',
   },
-  es: {
+  cas: {
     'qna.title': 'Hablemos de colaboración',
     'qna.subtitle': 'Elige lo que más te importa',
     'qna.readTime': 'min de lectura',
