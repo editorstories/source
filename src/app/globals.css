@@ -1,0 +1,348 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+
+/*_2052Y110M5D_2204_32H_*/
+
+/* ========================================
+   HEXAGON BEEHIVE ANIMATIONS
+
+   CRITICAL RULES:
+   - Base opacity is set inline (includes diagonal fade)
+   - Animations NEVER set opacity to fixed values
+   - Only multiply existing opacity or fade to 0
+   ======================================== */
+
+/* Base states */
+.hex-idle {
+  opacity: 0;
+}
+
+.hex-pre-rendered {
+  opacity: 0;
+}
+
+/* ==========================================
+   PHASE 1: FADE-IN
+   Fades from 0 to inline opacity
+   Uses opacity filter to multiply base opacity
+   ========================================== */
+.hex-fade-in {
+  animation: hexFadeIn 1.8s ease-out forwards;
+}
+
+@keyframes hexFadeIn {
+  0% {
+    filter: opacity(0);
+  }
+  100% {
+    filter: opacity(1);
+  }
+}
+
+
+/* ==========================================
+   PHASE 2: WAVE EFFECT
+   Transform ONLY - never touches opacity
+   Diagonal fade preserved from inline style
+   ========================================== */
+.hex-wave {
+  animation: hexWave 2.5s cubic-bezier(0.16, 1, 0.3, 1) infinite;
+  /* Opacity from inline style */
+}
+
+@keyframes hexWave {
+  0%, 100% {
+    transform: scale(1) translateY(0);
+    /* NO opacity here */
+  }
+  50% {
+    transform: scale(1.08) translateY(-3px);
+    /* NO opacity here */
+  }
+}
+
+/* ==========================================
+   PHASE 3: FADE-OUT
+   Fades to 0 with transform
+   Start opacity from inline style
+   ========================================== */
+.hex-fade-out {
+  animation: hexFadeOut 2.0s ease-in forwards;
+}
+
+@keyframes hexFadeOut {
+  0% {
+    transform: scale(1) translateY(0);
+    filter: opacity(1);
+  }
+  100% {
+    filter: opacity(0);
+    transform: scale(0.85) translateY(8px);
+  }
+}
+
+/* ==========================================
+   MOBILE: Slower, gentler animations
+   ========================================== */
+@media (max-width: 768px) {
+  .hex-fade-in {
+    animation-duration: 2.2s;
+  }
+
+  .hex-wave {
+    animation-duration: 3.0s;
+  }
+
+  .hex-fade-out {
+    animation-duration: 1.5s;
+  }
+
+  /* Mobile wave - reversed */
+  @keyframes hexWave {
+    0%, 100% {
+      transform: scale(1.05) translateY(-2px);
+    }
+    50% {
+      transform: scale(1) translateY(0);
+    }
+  }
+
+  /* Mobile fade-out */
+  @keyframes hexFadeOut {
+    0% {
+      transform: scale(1.05) translateY(-2px);
+      filter: opacity(1);  /* ✅ FIXED */
+    }
+    100% {
+      filter: opacity(0);  /* ✅ FIXED */
+      transform: scale(0.9) translateY(6px);
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* src/styles/sr1-hexagons.css */
+
+/* ========================================
+   SR1 HEXAGON GRID ANIMATIONS
+   Pure CSS animations for performance
+   NO FILTERS - crisp rendering
+   ======================================== */
+
+/* Base states */
+.sr1-hex-idle {
+  opacity: 0;
+}
+
+.sr1-hexagon {
+  position: absolute;
+  cursor: pointer;
+}
+
+/* ==========================================
+   ENTERING STATE
+   Fade in using direct opacity (no filter)
+   ========================================== */
+.sr1-hex-entering .sr1-hexagon {
+  animation: sr1HexFadeIn 1.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes sr1HexFadeIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.92);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* ==========================================
+   VISIBLE STATE WITH WAVE
+   Continuous subtle wave animation
+   ========================================== */
+.sr1-hex-visible .sr1-hexagon {
+  /* Opacity set inline - no animation needed */
+}
+
+.sr1-hex-wave .sr1-hexagon {
+  animation: sr1HexWave 3.5s cubic-bezier(0.45, 0.05, 0.55, 0.95) infinite;
+}
+
+@keyframes sr1HexWave {
+  0%, 100% {
+    transform: scale(1) translateY(0);
+  }
+  50% {
+    transform: scale(1.05) translateY(-2px);
+  }
+}
+
+/* ==========================================
+   EXITING STATE
+   Fade out with scale down (no filter)
+   ========================================== */
+.sr1-hex-exiting .sr1-hexagon {
+  animation: sr1HexFadeOut 1.0s ease-in forwards;
+}
+
+@keyframes sr1HexFadeOut {
+  0% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(0.88) translateY(4px);
+  }
+}
+
+/* ==========================================
+   HOVER EFFECTS
+   ========================================== */
+.sr1-hexagon:hover {
+  z-index: 10;
+}
+
+/* Center dot pulse animation */
+@keyframes sr1-pulse {
+  0%, 100% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: translate(-50%, -50%) scale(1.3);
+    opacity: 0.6;
+  }
+}
+
+/* ==========================================
+   EDGE HEXAGONS
+   Slightly reduced animation for edges
+   ========================================== */
+.sr1-hex-edge {
+  animation-duration: 4s !important;
+}
+
+/* ==========================================
+   MOBILE OPTIMIZATIONS
+   Gentler animations for better performance
+   ========================================== */
+@media (max-width: 768px) {
+  .sr1-hex-entering .sr1-hexagon {
+    animation-duration: 1.5s;
+  }
+
+  .sr1-hex-wave .sr1-hexagon {
+    animation-duration: 4.5s;
+  }
+
+  @keyframes sr1HexWave {
+    0%, 100% {
+      transform: scale(1) translateY(0);
+    }
+    50% {
+      transform: scale(1.03) translateY(-1px);
+    }
+  }
+}
+
+/* ==========================================
+   REDUCED MOTION
+   Respect user preferences
+   ========================================== */
+@media (prefers-reduced-motion: reduce) {
+  .sr1-hex-wave .sr1-hexagon {
+    animation: none;
+  }
+
+  .sr1-hexagon {
+    transition: transform 0.3s ease !important;
+  }
+}
+
+
+/* ==========================================
+   For somnlogg section
+   Theme button effect
+   Paused
+   ========================================== */
+
+/*.hexagon-button-container {*/
+/*  transition: transform 0.3s ease-out;*/
+/*}*/
+
+/*.hexagon-button-container.somnlogg-adapted {*/
+/*  min-width: 44px;*/
+/*  min-height: 44px;*/
+/*}*/
+
+/*.menu-button {*/
+/*  transition: background-color 0.3s ease,*/
+/*              border-color 0.3s ease,*/
+/*              color 0.3s ease,*/
+/*              width 0.3s ease-out,*/
+/*              font-size 0.3s ease-out;*/
+/*}*/
+
+/*.menu-button.dark-mode-adapted {*/
+/*!*   Additional styling if needed*!*/
+/*}*/
