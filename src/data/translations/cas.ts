@@ -156,7 +156,7 @@ export const cas = {
       loadMore: 'Carga mas...',
       clearSearch: 'Empezar',
 
-      list:cas_skills_list
+      list: cas_skills_list
     },
 
 

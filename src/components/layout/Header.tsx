@@ -41,7 +41,7 @@ const Header: React.FC<HeaderProps> = ({ debugId = 'main' }) => {
   const languageLabels = useMemo(() => ({
     sv: 'SV',
     eu: 'EU',
-    es: 'CAS'
+    cas: 'CAS'
   }), []);
 
   const forceCloseMenu = useCallback(() => {
