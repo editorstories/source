@@ -203,7 +203,10 @@ export const en = {
   education: {
     title: 'learning journey',
     subtitle: 'A comprehensive overview of my academic path, skill development and achievements across institutions and platforms.',
-
+    show: {
+      more: 'show more education',
+      less: 'show less'
+    },
     phases: {
       foundation: 'Foundation Years',
       specialization: 'Specialization',

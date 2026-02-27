@@ -183,7 +183,10 @@ export const es = {
     education: {
       title: 'trayectoria formativa',
       subtitle: 'Una visión completa de mi camino académico, desarrollo de habilidades y logros a través de diversas instituciones y plataformas.',
-
+      show: {
+        more: 'mostrar más educación',
+        less: 'mostrar menos'
+      },
       phases: {
         foundation: 'Años de fundación',
         specialization: 'Especialización',

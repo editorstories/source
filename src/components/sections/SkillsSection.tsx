@@ -4,7 +4,7 @@ import React, { useState, useEffect, useRef, useMemo } from 'react';
 import { ChevronUp, Search, Grid, List, Layers, X } from 'lucide-react';
 import { useLanguage } from '@/context/LanguageContext';
 import { getLocalizedSkills } from '@/data/skills';
-import { Skill } from '@/types';
+//import { Skill } from '@/types';
 
 // Liquid glass theme utilities
 const glassStyles = {
@@ -32,7 +32,13 @@ const glassStyles = {
     secondary: 'text-gray-600/70 dark:text-gray-400/70',
     muted: 'text-gray-200/50 dark:text-gray-200/50',
     focus: 'text-gray-100/50 dark:text-gray-100/50'
-  }
+  },
+  buttondiscovery: `
+    backdrop-blur-md bg-white/3 dark:bg-gray-900/3
+    border border-white/5 dark:border-gray-700/5
+    hover:bg-white/5 dark:hover:bg-gray-900/5
+    transition-all duration-300
+  `,
 };
 
 //muted: 'text-gray-500/50 dark:text-gray-500/50'
@@ -515,17 +521,18 @@ const SkillsSection = () => {
         </div>
 
         {hasMore && (
-          <div className="mt-12 text-center">
+          <div className="mt-12 text-center flex flex-row items-center justify-center">
             <button
               onClick={loadMore}
               className={`
-                px-6 py-3 rounded-xl
-                ${glassStyles.button}
+                px-6 py-3 rounded-xl flex flex-row items-center justify-center
+                ${glassStyles.buttondiscovery}
                 ${glassStyles.text.secondary}
                 hover:${glassStyles.text.primary}
                 transition-all duration-300
               `}
             >
+              ✨⃝ ➤ &ensp;
               {tp('skills.counter.remaining', remainingSkills)}
             </button>
           </div>

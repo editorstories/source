@@ -187,7 +187,10 @@ qasection: {
 education: {
     title: 'utbildningsresa',
     subtitle: 'En omfattande sammanställning av min läroresa, kompetensutveckling och akademiska prestationer från olika institutioner och plattformar.',
-
+    show: {
+      more: 'visa fler utbildningar',
+      less: 'visa mindre'
+    },
     // Faser (generiska)
     phases: {
       foundation: 'Grundår',

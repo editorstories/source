@@ -1,7 +1,7 @@
 import React, { useRef } from 'react';
 import { EducationCard } from '../education/components/EducationCard';
 import { ViewControls } from '../education/components/ViewControls';
-import { FloatingNav } from '../education/components/FloatingNav';
+//import { FloatingNav } from '../education/components/FloatingNav';
 import { NetworkVisualization } from '../education/components/NetworkVisualization';
 import { useEducationState } from '../education/hooks/useEducationState';
 import { useEducationData } from '../education/hooks/useEducationData';
@@ -168,8 +168,9 @@ export const EducationSection: React.FC = () => {
               flex items-center gap-2
             `}
           >
-            <BookOpen className="w-4 h-4" />
-            Show More Education ({remainingItems} remaining)
+            ✨⃝ ➤ &ensp;
+            {/*<BookOpen className="w-4 h-4" />*/}
+            {t('education.show.more')} ({remainingItems} remaining)
           </button>
         </div>
       )}
@@ -184,7 +185,7 @@ export const EducationSection: React.FC = () => {
               hover:${glassStyles.text.secondary} transition-colors duration-300
             `}
           >
-            Show Less
+            {t('education.show.less')}
           </button>
         </div>
       )}
